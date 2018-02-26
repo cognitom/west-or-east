@@ -9,7 +9,10 @@
     "dist/umd.js"
   ],
   "scripts": {
-    "build": "gulp --require reify"
+    "build": "gulp --require reify",
+    "test": "npm run standard && npm run mocha",
+    "standard": "standard lib src test gulpfile.js",
+    "mocha": "mocha test/spec.js --require reify"
   },
   "repository": {
     "type": "git",
@@ -32,11 +35,13 @@
     "gulp-decompress": "^2.0.2",
     "gulp-download": "0.0.1",
     "highland": "^2.11.1",
+    "mocha": "^5.0.1",
     "mz": "^2.7.0",
     "reify": "^0.14.2",
     "request": "^2.83.0",
     "rollup": "^0.56.3",
     "rollup-plugin-json": "^2.3.0",
-    "rollup-plugin-uglify": "^3.0.0"
+    "rollup-plugin-uglify": "^3.0.0",
+    "standard": "^11.0.0"
   }
 }
