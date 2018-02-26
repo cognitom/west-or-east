@@ -1,0 +1,42 @@
+{
+  "name": "west-or-east",
+  "version": "1.0.0",
+  "description": "郵便番号から、西日本か東日本を判定",
+  "module": "dist/index.js",
+  "main": "dist/umd.js",
+  "files": [
+    "dist/index.js",
+    "dist/umd.js"
+  ],
+  "scripts": {
+    "build": "gulp --require reify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cognitom/west-or-east.git"
+  },
+  "keywords": [
+    "zipcode",
+    "japan"
+  ],
+  "author": "Tsutomu Kawamura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cognitom/west-or-east/issues"
+  },
+  "homepage": "https://github.com/cognitom/west-or-east#readme",
+  "devDependencies": {
+    "fast-csv": "^2.4.1",
+    "gulp": "^4.0.0",
+    "gulp-convert-encoding": "^1.0.0",
+    "gulp-decompress": "^2.0.2",
+    "gulp-download": "0.0.1",
+    "highland": "^2.11.1",
+    "mz": "^2.7.0",
+    "reify": "^0.14.2",
+    "request": "^2.83.0",
+    "rollup": "^0.56.3",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}
