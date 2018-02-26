@@ -1,6 +1,6 @@
 import {join} from 'path'
 import {createReadStream} from 'fs'
-import {writeFile, mkdir} from 'mz/fs'
+import {writeFile} from 'mz/fs'
 
 import {dest, series} from 'gulp'
 import download from 'gulp-download'
@@ -35,18 +35,18 @@ export const downloadCsv = () => download(urls)
 export const generate = async () => {
   const treeA = new Tree()
   const treeB = new Tree()
-  
+
   await highland(files)
     .flatMap(file => highland(createReadStream(file)))
     .through(csv())
-    .map(arr => arr.length == 7 ? {zip: arr[0], pref: arr[1]} : {zip: arr[7], pref: arr[3]})
+    .map(arr => arr.length === 7 ? {zip: arr[0], pref: arr[1]} : {zip: arr[7], pref: arr[3]})
     .tap(({zip, pref}) => {
       treeA.add(zip, getArea(pref, 'A'))
       treeB.add(zip, getArea(pref, 'B'))
     })
     .collect()
     .toPromise(Promise)
-  
+
   const data = {
     a: treeA.generate().join(' '),
     b: treeB.generate().join(' ')
