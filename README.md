@@ -4,6 +4,12 @@
 
 > Zip code to West Japan or East Japan
 
+`v1.0.0`のコードは下記の通り。248バイトなので、気軽に使えます。
+
+```javascript
+var a="431412 44 45 46 47 48 49 5 6 7 8 90 91 92 93 96 97",b="4980 4988503 51 52 53 54 55 56 57 58 59 6 7 8 90 91 92 93 96 97",data={a:a,b:b},index=(a,e="A")=>data[e.toLowerCase()].split(" ").find(e=>0===a.indexOf(e))?"w":"e";export default index;
+```
+
 ## 導入
 
 ```sh
