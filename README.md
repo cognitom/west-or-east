@@ -1,7 +1,7 @@
 # West Or East
 
-> 郵便番号から、西日本か東日本を判定 (それだけ)
->
+郵便番号から、西日本か東日本を判定 (それだけ)
+
 > Zip code to West Japan or East Japan
 
 ## 導入
